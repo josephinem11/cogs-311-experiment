@@ -407,6 +407,15 @@
       data: {
         task: "responses",
       },
+      on_finish: function(data){ //attn checks
+        choice = data.responses;
+        if (comp_questions["question_attn"]["correct_response"] != data.responses[4]){
+          pass = false;
+        }
+        else {
+          pass = true;
+        }
+      },
       choices: "NO_KEYS",
       required: true,
     },
