@@ -1,13 +1,14 @@
-var story_5 = `</p>The Sherpas, members of the Nepalese ethnic group, resided on the high plateaus of the Himalayan even before Mount Everest was discovered. 
+var story_5 = `<p>The Sherpas, members of the Nepalese ethnic group, resided on the high plateaus of the Himalayan even before Mount Everest was discovered. 
 Ballabh, a Sherpa boy born in the 1830s, was famous for his climbing ability. He climbed the highest mountain in 1849: Kangchenjunga Mountain.</p>`
 
-var comp_questions = {
+var comp_questions_5 = {
   question_1: {
     question: "What ethnic group is Ballabh from?",
     A: "The Andamanese",
     B: "The Hmong",
     C: "The Sherpas",
     D: "Not answerable",
+    correct_response: "C",
   },
   question_2: {
     question: "What was the highest mountain in 1850?",
@@ -15,6 +16,7 @@ var comp_questions = {
     B: "Kangchenjunga Mountain",
     C: "Mount Everest",
     D: "Not answerable",
+    correct_response: "C",
   },
   question_3: {
     question: "What kind of houses do the Sherpas live in?",
@@ -22,26 +24,38 @@ var comp_questions = {
     B: "Igloo",
     C: "Brick houses",
     D: "Not answerable",
+    correct_response: "D",
   },
   question_4: {
-    question: "Which formula did Bobby have a hard time learning?",
-    A: "Rectangles",
-    B: "Squares",
-    C: "Triangles",
+    question: "When was Ballabh born?",
+    A: "1800s",
+    B: "1890s",
+    C: "1830s",
     D: "Not answerable",
+    correct_response: "B",
+  },
+  question_attn: {
+    question: "Which of the following is a geographic landform?",
+    A: "Mountains",
+    B: "Libraries",
+    C: "Mansions",
+    D: "Not answerable",
+    correct_response: "A",
   },
   question_5: {
     question: "When did Ballabh get into climbing?",
     A: "1830",
     B: "1834",
     C: "1837",
-    D: "Not answerable"
+    D: "Not answerable",
+    correct_response: "D",
   },
   question_6:{
     question: "What kind of environments do the sherpas live in?",
     A: "Rich grassland",
     B: "High plateau",
     C: "Cold tundra",
-    D: "Not answerable"
-  }
+    D: "Not answerable",
+    correct_response: "D",
+  },
 };
