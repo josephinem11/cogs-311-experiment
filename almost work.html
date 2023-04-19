@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://unpkg.com/jspsych@7.3.1"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-fullscreen"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-image-keyboard-response"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-html-button-response"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-survey@0.2.1"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-survey-text"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-survey-multi-choice"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-preload"></script>
+  <script src="https://unpkg.com/@jspsych-contrib/plugin-pipe"></script>
+  <script src="story_1.js"></script>
+  <script src="story_2.js"></script>
+  <script src="story_3.js"></script>
+  <script src="story_4.js"></script>
+  <script src="story_5.js"></script>
+  <script src="story_6.js"></script>
+  <link href="https://unpkg.com/jspsych@7.3.1/css/jspsych.css" rel="stylesheet">
+ 
+
+
+
+</head>
+
+<body></body>
+<script>
+
+  var condition = 0;
+
+
+  async function getCondition() {
+    condition = await jsPsychPipe.getCondition("VJ8IVBmV2ZRO");
+    if (condition == 0) { timeline = silence(); }
+    if (condition == 1) { timeline = loud(); }
+    jsPsych.run(timeline);
+  }
+  getCondition();
+
+//NOT WORKING
+  var array = [0, 1, 2, 3, 4, 5];
+  //var shuffledArray = jsPsych.randomization.shuffle(array);
+  var shuffledArray = array.sort(() => Math.random() - 0.5);
+  //console.log(shuff);
+  var story = story_1;
+  var comp_questions = comp_questions_1;
+  var pass; // check if passed attn check
+  var choice; // participant's choice
+//NOT WORKING
+
+  //------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  //VERSION A, Silence -------------------------------------------------------------------------------------------------------------------------------------
+  //------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  function silence() {
+
+//assigning shuffledArray's first element to a number and assigning a specific story w/ its questions
+    function getStory() {
+    if (shuffledArray[0] == 0) { story = story_1; comp_questions = comp_questions_1;}
+    if (shuffledArray[0] == 1) { story = story_2; comp_questions = comp_questions_2;}
+    if (shuffledArray[0] == 2) { story = story_3; comp_questions = comp_questions_3;}
+    if (shuffledArray[0] == 3) { story = story_4; comp_questions = comp_questions_4;}
+    if (shuffledArray[0] == 4) { story = story_5; comp_questions = comp_questions_5;}
+    if (shuffledArray[0] == 5) { story = story_6; comp_questions = comp_questions_6;}
+  }
+  
+  getStory();
+  console.log("Story: " + story);
+  console.log("Comprehension questions: " + comp_questions);
+//NOT WORKING
+
+    var jsPsych = initJsPsych();
+
+    var condition_name = 'silence'
+
+    const subject_id = jsPsych.randomization.randomID(10);
+    const filename = `${subject_id}.csv`;
+
+    jsPsych.data.addProperties({
+      subject_id: subject_id
+    })
+
+    var fullscreen_trial = {
+      type: jsPsychFullscreen,
+      fullscreen_mode: true
+    }
+
+    var preload = {
+      type: jsPsychPreload,
+      auto_preload: true
+    }
+
+    var welcome_string =
+      '<p style = "margin-left:10em; margin-right:10em; font-family:"Helvetica">LOUD Welcome to the experiment, please press any key to continue on with the experiment. Thank you!</p>';
+   
+    var welcome = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: welcome_string,
+    };
+
+    var experiment_starting_string =
+      "Experiment is starting, press any key to continue!";
+
+    var instruction_silent =
+      '<p style = "margin-left:10em; margin-right:10em; font-family:"Helvetica"><p>Please read the instructions carefully before moving to the next page.</p><br>The next screen will contain a story. Please read the story <b>SILENTLY</b> to yourself.</br>You will be asked six questions about the story after reading. Please read these questions <b>SILENTLY</b> as you answer them.</p><p><i><font size = "3px">Note that some questions may not have an answer.</font></i></p><p>Press any key to continue.</p>';
+
+    var instruction_trial = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: instruction_silent,
+    }
+
+
+      var procedure = {
+  timeline: [
+   
+    {      type: jsPsychSurvey,
+      pages: [
+        [
+        {
+        type: 'html',
+        prompt: story,
+      },
+          {
+            type: "multi-choice",
+            prompt: comp_questions["question_1"]["question"],
+            options: [
+              comp_questions["question_1"]["A"],
+              comp_questions["question_1"]["B"],
+              comp_questions["question_1"]["C"],
+              comp_questions["question_1"]["D"],
+            ],
+            required: true,
+          },
+          {
+            type: "multi-choice",
+            prompt: comp_questions["question_2"]["question"],
+            options: [
+              comp_questions["question_2"]["A"],
+              comp_questions["question_2"]["B"],
+              comp_questions["question_2"]["C"],
+              comp_questions["question_2"]["D"],
+            ],
+            required: true,
+          },
+          {
+            type: "multi-choice",
+            prompt: comp_questions["question_3"]["question"],
+            options: [
+              comp_questions["question_3"]["A"],
+              comp_questions["question_3"]["B"],
+              comp_questions["question_3"]["C"],
+              comp_questions["question_3"]["D"],
+            ],
+            required: true,
+          },
+          {
+            type: "multi-choice",
+            prompt: comp_questions["question_4"]["question"],
+            options: [
+              comp_questions["question_4"]["A"],
+              comp_questions["question_4"]["B"],
+              comp_questions["question_4"]["C"],
+              comp_questions["question_4"]["D"],
+            ],
+            required: true,
+          },
+          {
+            type: "multi-choice",
+            prompt: comp_questions["question_attn"]["question"],
+            options: [
+              comp_questions["question_attn"]["A"],
+              comp_questions["question_attn"]["B"],
+              comp_questions["question_attn"]["C"],
+              comp_questions["question_attn"]["D"],
+            ],
+            required: true,
+          },
+          {
+            type: "multi-choice",
+            prompt: comp_questions["question_5"]["question"],
+            options: [
+              comp_questions["question_5"]["A"],
+              comp_questions["question_5"]["B"],
+              comp_questions["question_5"]["C"],
+              comp_questions["question_5"]["D"],
+            ],
+            required: true,
+          },
+          {
+            type: "multi-choice",
+            prompt: comp_questions["question_6"]["question"],
+            options: [
+              comp_questions["question_6"]["A"],
+              comp_questions["question_6"]["B"],
+              comp_questions["question_6"]["C"],
+              comp_questions["question_6"]["D"],
+            ],
+            required: true,
+          },
+        ],
+      ],
+      data: {
+        task: "responses",
+      },
+      on_finish: function(data){
+        choice = data.responses;
+        if (comp_questions["question_attn"]["correct_response"] != data.responses[4]){
+          pass = false;
+        }
+        else {
+          pass = true;
+        }
+      }
+      choices: "NO_KEYS",
+      required: true,
+    },
+  ],
+};
+
+
+      var tech_diff_survey = {
+      type: jsPsychSurveyText,
+      questions: [
+        {
+          prompt: "Please report any technical difficulties that you experienced.",
+        },
+      ],
+    };
+
+    const save_data = {
+      type: jsPsychPipe,
+      action: "save",
+      experiment_id: "VJ8IVBmV2ZRO",
+      filename: filename,
+      data_string: () => jsPsych.data.get().csv()
+    };
+
+
+    var final_trial = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: `<p style = \"margin-left:10em; margin-right:10em; font-family:\"Helvetica\">Thank you for agreeing to participate in this study. We presented stories that included both true and false information in dialogue and narration-based contexts in hopes of seeing how the context in which specifically false information was presented influenced the acceptance and belief in that information. Please click <a href="https://app.prolific.co/submissions/complete?cc=12D60640">this link </a> to go back to Prolific and complete your submission.
+  </p>`,
+      choices: "NO_KEYS",
+    };
+
+    jsPsych.run([
+      fullscreen_trial,
+      welcome,
+      instruction_trial,
+      procedure,
+      tech_diff_survey,
+      //save_data,
+      final_trial
+    ])
+  }
+
+
+  //------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  //VERSION B, Out Loud -------------------------------------------------------------------------------------------------------------------------------------
+  //------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  function loud() {
+
+//assigning shuffledArray's first element to a number and assigning a specific story w/ its questions
+    function getStory() {
+    if (shuffledArray[0] == 0) { story = story_1; comp_questions = comp_questions_1;}
+    if (shuffledArray[0] == 1) { story = story_2; comp_questions = comp_questions_2;}
+    if (shuffledArray[0] == 2) { story = story_3; comp_questions = comp_questions_3;}
+    if (shuffledArray[0] == 3) { story = story_4; comp_questions = comp_questions_4;}
+    if (shuffledArray[0] == 4) { story = story_5; comp_questions = comp_questions_5;}
+    if (shuffledArray[0] == 5) { story = story_6; comp_questions = comp_questions_6;}
+  }
+  
+  getStory();
+//NOT WORKING
+
+    var condition_name = 'loud'
+    var jsPsych = initJsPsych();
+
+    const subject_id = jsPsych.randomization.randomID(10);
+    const filename = `${subject_id}.csv`;
+
+    jsPsych.data.addProperties({
+      subject_id: subject_id
+    })
+
+    var fullscreen_trial = {
+      type: jsPsychFullscreen,
+      fullscreen_mode: true
+    }
+
+    var preload = {
+      type: jsPsychPreload,
+      auto_preload: true
+    }
+
+    var welcome_string =
+      '<p style = "margin-left:10em; margin-right:10em; font-family:"Helvetica">LOUD Welcome to the experiment, please press any key to continue on with the experiment. Thank you!</p>';
+    
+    var welcome = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: welcome_string,
+    };
+
+    var experiment_starting_string =
+      "Experiment is starting, press any key to continue!";
+
+    var instruction_aloud =
+      '<p style = "margin-left:10em; margin-right:10em; font-family:"Helvetica"><p>Please read the instructions carefully before moving to the next page.</p><br>The next screen will contain a story. Please read the story <b>ALOUD</b> to yourself.</br>You will be asked six questions about the story after reading. Please read these questions <b>ALOUD</b> as you answer them. </p><p><i><font size = "3px">Note that some questions may not have an answer.</font></i></p><p>Press any key to continue.</p>';
+
+    var instruction_trial = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: instruction_aloud,
+    }
+
+    var procedure = {
+  timeline: [
+   
+    {      type: jsPsychSurvey,
+      pages: [
+        [
+        {
+        type: 'html',
+        prompt: story,
+      },
+          {
+            type: "multi-choice",
+            prompt: comp_questions["question_1"]["question"],
+            options: [
+              comp_questions["question_1"]["A"],
+              comp_questions["question_1"]["B"],
+              comp_questions["question_1"]["C"],
+              comp_questions["question_1"]["D"],
+            ],
+            required: true,
+          },
+          {
+            type: "multi-choice",
+            prompt: comp_questions["question_2"]["question"],
+            options: [
+              comp_questions["question_2"]["A"],
+              comp_questions["question_2"]["B"],
+              comp_questions["question_2"]["C"],
+              comp_questions["question_2"]["D"],
+            ],
+            required: true,
+          },
+          {
+            type: "multi-choice",
+            prompt: comp_questions["question_3"]["question"],
+            options: [
+              comp_questions["question_3"]["A"],
+              comp_questions["question_3"]["B"],
+              comp_questions["question_3"]["C"],
+              comp_questions["question_3"]["D"],
+            ],
+            required: true,
+          },
+          {
+            type: "multi-choice",
+            prompt: comp_questions["question_4"]["question"],
+            options: [
+              comp_questions["question_4"]["A"],
+              comp_questions["question_4"]["B"],
+              comp_questions["question_4"]["C"],
+              comp_questions["question_4"]["D"],
+            ],
+            required: true,
+          },
+          {
+            type: "multi-choice",
+            prompt: comp_questions["question_attn"]["question"],
+            options: [
+              comp_questions["question_attn"]["A"],
+              comp_questions["question_attn"]["B"],
+              comp_questions["question_attn"]["C"],
+              comp_questions["question_attn"]["D"],
+            ],
+            required: true,
+          },
+          {
+            type: "multi-choice",
+            prompt: comp_questions["question_5"]["question"],
+            options: [
+              comp_questions["question_5"]["A"],
+              comp_questions["question_5"]["B"],
+              comp_questions["question_5"]["C"],
+              comp_questions["question_5"]["D"],
+            ],
+            required: true,
+          },
+          {
+            type: "multi-choice",
+            prompt: comp_questions["question_6"]["question"],
+            options: [
+              comp_questions["question_6"]["A"],
+              comp_questions["question_6"]["B"],
+              comp_questions["question_6"]["C"],
+              comp_questions["question_6"]["D"],
+            ],
+            required: true,
+          },
+        ],
+      ],
+      data: {
+        task: "responses",
+      },
+      choices: "NO_KEYS",
+      required: true,
+    },
+  ],
+};
+
+      var tech_diff_survey = {
+      type: jsPsychSurveyText,
+      questions: [
+        {
+          prompt: "Please report any technical difficulties that you experienced.",
+        },
+      ],
+    };
+
+    const save_data = {
+      type: jsPsychPipe,
+      action: "save",
+      experiment_id: "VJ8IVBmV2ZRO",
+      filename: filename,
+      data_string: () => jsPsych.data.get().csv()
+    };
+
+
+    var final_trial = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: `<p style = \"margin-left:10em; margin-right:10em; font-family:\"Helvetica\">Thank you for agreeing to participate in this study. We presented stories that included both true and false information in dialogue and narration-based contexts in hopes of seeing how the context in which specifically false information was presented influenced the acceptance and belief in that information. Please click <a href="https://app.prolific.co/submissions/complete?cc=12D60640">this link </a> to go back to Prolific and complete your submission.
+  </p>`,
+      choices: "NO_KEYS",
+    };
+
+    jsPsych.run([
+      fullscreen_trial,
+      welcome,
+      instruction_trial,
+      procedure,
+      tech_diff_survey,
+      //save_data,
+      final_trial
+    ])
+  }
+
+
+
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+</script>
+
+</html>
