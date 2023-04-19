@@ -1,4 +1,4 @@
-  var story_1 = "Uncle Jim owns a farm on the outskirts of Ireland. He mainly raises cows, roosters, and pigs on the farm. Cows and pigs are housed inside Uncle Jim`s red barn while roosters like to spend their time on the barn roof. The roof is more slanted on the right side.";
+var story_1 = `<p>Uncle Jim owns a farm on the outskirts of Ireland. He mainly raises cows, roosters, and pigs on the farm. Cows and pigs are housed inside Uncle Jim's red barn while roosters like to spend their time on the barn roof. The roof is more slanted on the right side.</p>`
 
 var comp_questions_1 = {
   question_1: {
@@ -15,10 +15,10 @@ var comp_questions_1 = {
     B: "2",
     C: "3",
     D: "Not answerable",
-    correct_response: "D",
+    correct_response: "C",
   },
   question_3: {
-    question: "How many doors are there to Uncle Jim’s barn?",
+    question: "How many doors are there to Uncle Jim's barn?",
     A: "1",
     B: "2",
     C: "3",
@@ -32,6 +32,14 @@ var comp_questions_1 = {
     C: "Down",
     D: "Not answerable",
     correct_response: "D",
+  },
+  question_attn: {
+    question: "Which of the following is not an animal?",
+    A: "Pigs",
+    B: "Pineapple",
+    C: "Dolphin",
+    D: "Not answerable",
+    correct_response: "B",
   },
   question_5: {
     question: "Which side is the roof more slanted on?",
@@ -50,3 +58,4 @@ var comp_questions_1 = {
     correct_response: "D",
   },
 };
+
