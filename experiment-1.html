@@ -30,7 +30,7 @@
 
 
   async function getCondition() {
-    condition = await jsPsychPipe.getCondition("VJ8IVBmV2ZRO");
+    condition = await jsPsychPipe.getCondition("ImqWglh8uDm6");
     if (condition == 0) { timeline = silence(); }
     if (condition == 1) { timeline = loud(); }
     jsPsych.run(timeline);
@@ -260,7 +260,7 @@
     const save_data = {
       type: jsPsychPipe,
       action: "save",
-      experiment_id: "VJ8IVBmV2ZRO",
+      experiment_id: "ImqWglh8uDm6",
       filename: filename,
       data_string: () => jsPsych.data.get().csv()
     };
