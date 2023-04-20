@@ -19,6 +19,8 @@
   <script src="story_5.js"></script>
   <script src="story_6.js"></script>
   <link href="https://unpkg.com/jspsych@7.3.1/css/jspsych.css" rel="stylesheet">
+  <link href="https://unpkg.com/@jspsych/plugin-survey@0.2.1/css/survey.css" rel="stylesheet">
+
  
 
 
@@ -93,7 +95,7 @@
     }
 
     var welcome_string =
-      '<p style = "margin-left:10em; margin-right:10em; font-family:"Helvetica">LOUD Welcome to the experiment, please press any key to continue on with the experiment. Thank you!</p>';
+      '<p style = "margin-left:10em; margin-right:10em; font-family:"Helvetica">Welcome to the experiment, please press any key to continue on with the experiment. Thank you!</p>';
    
     var welcome = {
       type: jsPsychHtmlKeyboardResponse,
@@ -121,7 +123,7 @@
         {
         type: 'html',
         prompt: story,
-      },
+        },
           {
             type: "multi-choice",
             prompt: comp_questions["question_1"]["question"],
@@ -132,8 +134,13 @@
               comp_questions["question_1"]["D"],
             ],
             required: true,
-          },
+          }],
+          [
           {
+          type: 'html',
+          prompt: story,
+          },
+            {
             type: "multi-choice",
             prompt: comp_questions["question_2"]["question"],
             options: [
@@ -143,8 +150,13 @@
               comp_questions["question_2"]["D"],
             ],
             required: true,
-          },
+          }],
+          [
           {
+          type: 'html',
+          prompt: story,
+          },
+            {
             type: "multi-choice",
             prompt: comp_questions["question_3"]["question"],
             options: [
@@ -154,8 +166,13 @@
               comp_questions["question_3"]["D"],
             ],
             required: true,
-          },
+          }],
+          [
           {
+          type: 'html',
+          prompt: story,
+          },
+            {
             type: "multi-choice",
             prompt: comp_questions["question_4"]["question"],
             options: [
@@ -165,8 +182,13 @@
               comp_questions["question_4"]["D"],
             ],
             required: true,
-          },
+          }],
+          [
           {
+          type: 'html',
+          prompt: story,
+          },
+            {
             type: "multi-choice",
             prompt: comp_questions["question_attn"]["question"],
             options: [
@@ -176,8 +198,13 @@
               comp_questions["question_attn"]["D"],
             ],
             required: true,
-          },
+          }],
+          [
           {
+          type: 'html',
+          prompt: story,
+          },
+            {
             type: "multi-choice",
             prompt: comp_questions["question_5"]["question"],
             options: [
@@ -187,8 +214,13 @@
               comp_questions["question_5"]["D"],
             ],
             required: true,
-          },
+          }],
+          [
           {
+          type: 'html',
+          prompt: story,
+          },
+            {
             type: "multi-choice",
             prompt: comp_questions["question_6"]["question"],
             options: [
@@ -198,15 +230,15 @@
               comp_questions["question_6"]["D"],
             ],
             required: true,
-          },
+          }],
         ],
-      ],
+      //],
       data: {
         task: "responses",
       },
       on_finish: function(data){
         choice = data.responses;
-        if (comp_questions["question_attn"]["correct_response"] != data.responses[4]){
+        if (comp_questions.question_attn.correct_response != data.response.Q4){
           pass = false;
         }
         else {
@@ -297,7 +329,7 @@
     }
 
     var welcome_string =
-      '<p style = "margin-left:10em; margin-right:10em; font-family:"Helvetica">LOUD Welcome to the experiment, please press any key to continue on with the experiment. Thank you!</p>';
+      '<p style = "margin-left:10em; margin-right:10em; font-family:"Helvetica">Welcome to the experiment, please press any key to continue on with the experiment. Thank you!</p>';
     
     var welcome = {
       type: jsPsychHtmlKeyboardResponse,
@@ -335,6 +367,11 @@
               comp_questions["question_1"]["D"],
             ],
             required: true,
+          }],
+          [
+          {
+          type: 'html',
+          prompt: story,
           },
           {
             type: "multi-choice",
@@ -346,8 +383,13 @@
               comp_questions["question_2"]["D"],
             ],
             required: true,
-          },
+          }],
+          [
           {
+          type: 'html',
+          prompt: story,
+          },
+            {
             type: "multi-choice",
             prompt: comp_questions["question_3"]["question"],
             options: [
@@ -357,8 +399,12 @@
               comp_questions["question_3"]["D"],
             ],
             required: true,
-          },
+          }],
+          [
           {
+          type: 'html',
+          prompt: story,
+          },{
             type: "multi-choice",
             prompt: comp_questions["question_4"]["question"],
             options: [
@@ -368,8 +414,13 @@
               comp_questions["question_4"]["D"],
             ],
             required: true,
-          },
+          }],
+          [
           {
+          type: 'html',
+          prompt: story,
+          },
+            {
             type: "multi-choice",
             prompt: comp_questions["question_attn"]["question"],
             options: [
@@ -379,8 +430,13 @@
               comp_questions["question_attn"]["D"],
             ],
             required: true,
-          },
+          }],
+          [
           {
+          type: 'html',
+          prompt: story,
+          },
+            {
             type: "multi-choice",
             prompt: comp_questions["question_5"]["question"],
             options: [
@@ -390,8 +446,13 @@
               comp_questions["question_5"]["D"],
             ],
             required: true,
-          },
+          }],
+          [
           {
+          type: 'html',
+          prompt: story,
+          },
+            {
             type: "multi-choice",
             prompt: comp_questions["question_6"]["question"],
             options: [
@@ -401,15 +462,15 @@
               comp_questions["question_6"]["D"],
             ],
             required: true,
-          },
+          }],
         ],
-      ],
+      //],
       data: {
         task: "responses",
       },
       on_finish: function(data){ //attn checks
         choice = data.responses;
-        if (comp_questions["question_attn"]["correct_response"] != data.responses[4]){
+        if (comp_questions.question_attn.correct_response != data.response.Q4){
           pass = false;
         }
         else {
