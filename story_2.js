@@ -2,20 +2,20 @@ var story_2 = `<p>Jake, who lives in California, is an avid hiker who likes to e
 
 var comp_questions_2 = {
   question_1: {
-    question: "Is it legal for a man in California to marry his widow's sister?",
-    A: "Yes",
-    B: "Yes but they cannot be California residents",
-    C: "No",
-    D: "Not answerable",
-    correct_response: "D",
-  },
-  question_2: {
     question: "Had Jake and Aimee met before?",
     A: "Yes, briefly",
     B: "Yes, they knew each other for a long time",
     C: "No",
     D: "Not answerable",
     correct_response: "A",
+  },
+  question_2: {
+    question: "Is it legal for a man in California to marry his widow's sister?",
+    A: "Yes",
+    B: "Yes but they cannot be California residents",
+    C: "No",
+    D: "Not answerable",
+    correct_response: "D",
   },
   question_3: {
     question: "What ignited Jake and Aimee's passion for cooking?",
@@ -26,12 +26,12 @@ var comp_questions_2 = {
     correct_response: "D",
   },
   question_4: {
-    question: "When was the new law passed?",
-    A: "2020",
-    B: "2014",
-    C: "2013",
+    question: "Does Aimee have a sister? ",
+    A: "Yes",
+    B: "No",
+    C: "Jake has a sister",
     D: "Not answerable",
-    correct_response: "D",
+    correct_response: "A",
   },
   question_attn: {
     question: "Which of the following is a state that begins with the same first letter as California?",
@@ -42,20 +42,19 @@ var comp_questions_2 = {
     correct_response: "A",
   },
   question_5: {
-    question: "Does Aimee have a sister? ",
-    A: "Yes",
-    B: "No",
-    C: "Jake has a sister",
-    D: "Not answerable",
-    correct_response: "A",
-  },
-  question_6: {
     question: "Where does Aimee live?",
     A: "New York City",
     B: "Nashville",
-    C: "Santa Monica",
+    C: "San Francisco",
     D: "Not answerable",
     correct_response: "C",
   },
-  
+  question_6: {
+    question: "When was the new law passed?",
+    A: "2020",
+    B: "2014",
+    C: "2013",
+    D: "Not answerable",
+    correct_response: "D",
+  },
 };
