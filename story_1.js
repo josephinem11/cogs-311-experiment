@@ -1,4 +1,4 @@
-var story_1 = "Uncle Jim owns a farm on the outskirts of Ireland. He mainly raises cows, roosters, and pigs on the farm. Cows and pigs are housed inside Uncle Jim`s red barn while roosters like to spend their time on the barn roof. The roof is more slanted on the right side.";
+var story_1 = "Uncle Jim owns a farm on the outskirts of Ireland. He mainly raises cows, roosters, and pigs on the farm. Cows and pigs are housed inside Uncle Jim's red barn while roosters like to spend their time on the barn roof. The roof is more slanted on the right side.";
 
 var comp_questions_1 = {
   question_1: {
@@ -18,7 +18,7 @@ var comp_questions_1 = {
     correct_response: "C",
   },
   question_3: {
-    question: "How many doors are there to Uncle Jim`s barn?",
+    question: "How many doors are there to Uncle Jim's barn?",
     A: "1",
     B: "2",
     C: "3",
