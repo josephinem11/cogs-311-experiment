@@ -27,7 +27,7 @@ var comp_questions_5 = {
     correct_response: "D"
   },
   question_4: {
-    question: "When was Ballabh born??",
+    question: "When was Ballabh born?",
     A: "1800s",
     B: "1890s",
     C: "1830s",
