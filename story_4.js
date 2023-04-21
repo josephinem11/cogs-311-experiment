@@ -11,7 +11,7 @@ var comp_questions_4 = {
  correct_response: "A" 
   },
   question_2: {
-    question: "What is the name of the shape whose circumeference is 'pi-r-squared'?",
+    question: "What is the name of the shape whose circumference is 'pi-r-squared'?",
     A: "Circle",
     B: "Triangle",
     C: "Hexagon",
