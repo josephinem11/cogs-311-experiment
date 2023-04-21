@@ -2,8 +2,8 @@ var story_3 = "Sarah is given an assignment for physics class. She must build a 
 
 var comp_questions_3 = {
     question_3: {
-        question: "What color should Sarah`s bridge be?",
-        A: "Blue ",
+        question: "What color should Sarah's bridge be?",
+        A: "Blue",
         B: "Frog green",
         C: "Baby pink",
         D: "Not answerable",
@@ -11,15 +11,15 @@ var comp_questions_3 = {
     },
     question_1: {
         question: "What class was this assignment for?",
-        A: "Math ",
+        A: "Math",
         B: "Physics",
-        C: "Chemistry ",
+        C: "Chemistry",
         D: "Not answerable",
         correct_response: "B",
     },
     question_4: {
         question: "Where is Sarah going next weekend?",
-        A: "The TV",
+        A: "Las Vegas",
         B: "San Francisco",
         C: "Toronto",
         D: "Not answerable",
