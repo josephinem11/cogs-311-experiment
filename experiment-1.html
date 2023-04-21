@@ -123,6 +123,7 @@
           {
             type: "multi-choice",
             prompt: comp_questions["question_1"]["question"],
+            name: comp,
             options: [
               comp_questions["question_1"]["A"],
               comp_questions["question_1"]["B"],
@@ -139,6 +140,7 @@
             {
             type: "multi-choice",
             prompt: comp_questions["question_2"]["question"],
+            name: sem,
             options: [
               comp_questions["question_2"]["A"],
               comp_questions["question_2"]["B"],
@@ -155,6 +157,7 @@
             {
             type: "multi-choice",
             prompt: comp_questions["question_3"]["question"],
+            name: dist,
             options: [
               comp_questions["question_3"]["A"],
               comp_questions["question_3"]["B"],
@@ -171,6 +174,7 @@
             {
             type: "multi-choice",
             prompt: comp_questions["question_4"]["question"],
+            name: comp,
             options: [
               comp_questions["question_4"]["A"],
               comp_questions["question_4"]["B"],
@@ -187,6 +191,7 @@
             {
             type: "multi-choice",
             prompt: comp_questions["question_attn"]["question"],
+            name: attn,
             options: [
               comp_questions["question_attn"]["A"],
               comp_questions["question_attn"]["B"],
@@ -203,6 +208,7 @@
             {
             type: "multi-choice",
             prompt: comp_questions["question_5"]["question"],
+            name: comp,
             options: [
               comp_questions["question_5"]["A"],
               comp_questions["question_5"]["B"],
@@ -219,6 +225,7 @@
             {
             type: "multi-choice",
             prompt: comp_questions["question_6"]["question"],
+            name: dist,
             options: [
               comp_questions["question_6"]["A"],
               comp_questions["question_6"]["B"],
@@ -231,13 +238,16 @@
       //],
       data: {
         task: "responses",
+          check: () => pass
       },
       on_finish: function(data){
         choice = data.responses;
-        if (comp_questions.question_attn.correct_response != data.response.Q4){
+        if (comp_questions.question_attn.correct_response != choice.Q4){
+          data.check = false;
           pass = false;
         }
         else {
+          data.check = true;
           pass = true;
         }
       },
@@ -356,6 +366,7 @@
           {
             type: "multi-choice",
             prompt: comp_questions["question_1"]["question"],
+             name: comp,
             options: [
               comp_questions["question_1"]["A"],
               comp_questions["question_1"]["B"],
@@ -372,6 +383,7 @@
           {
             type: "multi-choice",
             prompt: comp_questions["question_2"]["question"],
+             name: sem,
             options: [
               comp_questions["question_2"]["A"],
               comp_questions["question_2"]["B"],
@@ -388,6 +400,7 @@
             {
             type: "multi-choice",
             prompt: comp_questions["question_3"]["question"],
+               name: dist,
             options: [
               comp_questions["question_3"]["A"],
               comp_questions["question_3"]["B"],
@@ -403,6 +416,7 @@
           },{
             type: "multi-choice",
             prompt: comp_questions["question_4"]["question"],
+             name: comp,
             options: [
               comp_questions["question_4"]["A"],
               comp_questions["question_4"]["B"],
@@ -419,6 +433,7 @@
             {
             type: "multi-choice",
             prompt: comp_questions["question_attn"]["question"],
+               name: attn,
             options: [
               comp_questions["question_attn"]["A"],
               comp_questions["question_attn"]["B"],
@@ -435,6 +450,7 @@
             {
             type: "multi-choice",
             prompt: comp_questions["question_5"]["question"],
+               name: comp,
             options: [
               comp_questions["question_5"]["A"],
               comp_questions["question_5"]["B"],
@@ -451,6 +467,7 @@
             {
             type: "multi-choice",
             prompt: comp_questions["question_6"]["question"],
+               name: dist,
             options: [
               comp_questions["question_6"]["A"],
               comp_questions["question_6"]["B"],
@@ -463,13 +480,16 @@
       //],
       data: {
         task: "responses",
+          check: () => pass
       },
       on_finish: function(data){ //attn checks
         choice = data.responses;
-        if (comp_questions.question_attn.correct_response != data.response.Q4){
+        if (comp_questions.question_attn.correct_response != choice.Q4){
+          data.check = false;
           pass = false;
         }
         else {
+          data.check = true;
           pass = true;
         }
       },
