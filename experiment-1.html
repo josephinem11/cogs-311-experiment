@@ -235,8 +235,8 @@
           check: () => pass
       },
       on_finish: function(data){
-        choice = data.response;
-        if (comp_questions.question_attn.correct_response != choice.Q4){
+       // choice = data.response;
+        if (comp_questions.question_attn.correct_response != data.responses.Q4){
           data.check = false;
           pass = false;
         }
@@ -471,8 +471,8 @@
           check: () => pass
       },
       on_finish: function(data){ //attn checks
-        choice = data.response;
-        if (comp_questions.question_attn.correct_response != choice.Q4){
+       // choice = data.response;
+        if (comp_questions.question_attn.correct_response != data.responses.Q4){
           data.check = false;
           pass = false;
         }
