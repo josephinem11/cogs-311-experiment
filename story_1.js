@@ -1,4 +1,4 @@
-var story_1 = `<p>Uncle Jim owns a farm on the outskirts of Ireland. He mainly raises cows, roosters, and pigs on the farm. Cows and pigs are housed inside Uncle Jim's red barn while roosters like to spend their time on the barn roof. The roof is more slanted on the right side.</p>`
+var story_1 = "Uncle Jim owns a farm on the outskirts of Ireland. He mainly raises cows, roosters, and pigs on the farm. Cows and pigs are housed inside Uncle Jim`s red barn while roosters like to spend their time on the barn roof. The roof is more slanted on the right side.";
 
 var comp_questions_1 = {
   question_1: {
@@ -9,22 +9,6 @@ var comp_questions_1 = {
     D: "Not answerable",
     correct_response: "C",
   },
-  question_2: {
-    question: "If a rooster laid an egg on the apex of the slanted barn roof, which way would the egg roll, left or right?",
-    A: "Left",
-    B: "Right",
-    C: "Down",
-    D: "Not answerable",
-    correct_response: "D",
-  },
-  question_3: {
-    question: "How many doors are there to Uncle Jim's barn?",
-    A: "1",
-    B: "2",
-    C: "3",
-    D: "Not answerable",
-    correct_response: "D",
-  },
   question_4: {
     question: "How many animals does Uncle Jim mainly raise?",
     A: "1",
@@ -33,15 +17,23 @@ var comp_questions_1 = {
     D: "Not answerable",
     correct_response: "C",
   },
-  question_attn: {
-    question: "Which of the following is not an animal?",
-    A: "Pigs",
-    B: "Pineapple",
-    C: "Dolphin",
+  question_3: {
+    question: "How many doors are there to Uncle Jim`s barn?",
+    A: "1",
+    B: "2",
+    C: "3",
     D: "Not answerable",
-    correct_response: "B",
+    correct_response: "D",
   },
-  question_5: {
+  question_2: {
+    question: "If a rooster laid an egg on the apex of the slanted barn roof, which way would the egg roll, left or right?",
+    A: "Left",
+    B: "Right",
+    C: "Down",
+    D: "Not answerable",
+    correct_response: "D",
+  },
+  question_6: {
     question: "Which side is the roof more slanted on?",
     A: "The right side",
     B: "The left side",
@@ -49,7 +41,7 @@ var comp_questions_1 = {
     D: "Not answerable",
     correct_response: "A",
   },
-  question_6: {
+  question_7: {
     question: "Which part of Ireland does he live in?",
     A: "North West",
     B: "Northern Ireland",
@@ -57,5 +49,12 @@ var comp_questions_1 = {
     D: "Not answerable",
     correct_response: "D",
   },
+  question_5: {
+    question: "Which of the following is not an animal?",
+    A: "Pigs",
+    B: "Pineapple",
+    C: "Dolphin",
+    D: "Not answerable",
+    correct_response: "Pineapple",
+  },
 };
-
