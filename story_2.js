@@ -5,7 +5,7 @@ var story_2_inst = `<p style="text-align center;"><b>The recording has started. 
 
 var comp_questions_2 = {
   question_2: {
-    question: "Is it legal for a man in California to marry his widow`s sister?",
+    question: "Is it legal for a man in California to marry his widow's sister?",
     A: "Yes",
     B: "Yes but they cannot be California residents",
     C: "No",
@@ -24,7 +24,7 @@ var comp_questions_2 = {
     question: "What ignited Jake and Aimee's passion for cooking?",
     A: "Cooking class",
     B: "They had wonderful pasta when going out to a restaurant",
-    C: "Their new kitchen utensil",
+    C: "Their new kitchen utensils",
     D: "Not answerable",
     correct_response: "D",
   },
