@@ -5,8 +5,8 @@ var story_3_inst = `<p style="text-align center;"><b>The recording has started. 
 
 var comp_questions_3 = {
     question_3: {
-        question: "What color should Sarah`s bridge be?",
-        A: "Blue ",
+        question: "What color should Sarah's bridge be?",
+        A: "Blue",
         B: "Frog green",
         C: "Baby pink",
         D: "Not answerable",
