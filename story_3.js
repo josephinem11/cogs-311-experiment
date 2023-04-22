@@ -14,7 +14,7 @@ var comp_questions_3 = {
     },
     question_1: {
         question: "What class was this assignment for?",
-        A: "Math ",
+        A: "Math",
         B: "Physics",
         C: "Chemistry ",
         D: "Not answerable",
@@ -22,7 +22,7 @@ var comp_questions_3 = {
     },
     question_4: {
         question: "Where is Sarah going next weekend?",
-        A: "The TV",
+        A: "Las Vegas",
         B: "San Francisco",
         C: "Toronto",
         D: "Not answerable",
@@ -32,7 +32,7 @@ var comp_questions_3 = {
         question: "What material was not available for Sarah to use?",
         A: "Steel",
         B: "Hot glue",
-        C: "Toothpicks",
+        C: "Pipe cleaners",
         D: "Not answerable",
         correct_response: "C",
     },
