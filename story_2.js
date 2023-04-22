@@ -21,10 +21,10 @@ var comp_questions_2 = {
     correct_response: "A",
   },
   question_3: {
-    question: "What ignited Jake and Aimee`s passion for cooking?",
+    question: "What ignited Jake and Aimee's passion for cooking?",
     A: "Cooking class",
     B: "They had wonderful pasta when going out to a restaurant",
-    C: "Their new kitchen utensi",
+    C: "Their new kitchen utensil",
     D: "Not answerable",
     correct_response: "D",
   },
@@ -45,7 +45,7 @@ var comp_questions_2 = {
     correct_response: "A",
   },
   question_6: {
-    question: "Where does Aimme live?",
+    question: "Where does Aimee live?",
     A: "New York City",
     B: "Nashville",
     C: "Santa Monica",
@@ -56,8 +56,8 @@ var comp_questions_2 = {
     question: "Which of the following is a state that begins with the same first letter as California?",
     A: "Colorado",
     B: "Nebraska",
-    C: "Nebraska",
+    C: "Georgia",
     D: "Not answerable",
-    correct_response: "A",
+    correct_response: "Colorado",
   },
 };
