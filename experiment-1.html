@@ -473,7 +473,8 @@
 
     var final_trial = {
       type: jsPsychHtmlKeyboardResponse,
-      stimulus: `<p style = \"margin-left:10em; margin-right:10em; font-family:\"Helvetica\">Thank you for participating! This experiment was designed to test the level of processing </p><p>that occurs in silent and aloud reading. Some of the questions asked were illusionary;</p><p>questions contained distorted information. Please click <a href="https://app.prolific.co/submissions/complete?cc=12D60640">this link </a> to go back to Prolific and complete your submission.</p>`,
+      stimulus: `<p style = \"margin-left:10em; margin-right:10em; font-family:\"Helvetica\">Thank you for participating!</p><p>This experiment was designed to test the level of processing that occurs in silent and aloud reading. Some of the questions asked during the experiment were illusionary, or phrased in a misleadingly answerable way but were actually unanswerable. Previous studies have shown that individuals who read aloud have a memory advantage over those who read silently. Hence, we are interested in seeing if subjects who read aloud engage in deeper processing when answering illusionary questions compared to subjects who read silently.</p>
+      <p>Please click <a href="https://app.prolific.co/submissions/complete?cc=12D60640">this link </a> to go back to Prolific and complete your submission.</p>`,
       choices: "NO_KEYS",
     };
     timeline.push(procedure, tech_diff_survey, save_data, final_trial)
