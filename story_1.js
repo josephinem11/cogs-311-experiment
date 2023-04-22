@@ -21,7 +21,7 @@ var comp_questions_1 = {
     correct_response: "C",
   },
   question_3: {
-    question: "How many doors are there to Uncle Jim`s barn?",
+    question: "How many doors are there to Uncle Jim's barn?",
     A: "1",
     B: "2",
     C: "3",
