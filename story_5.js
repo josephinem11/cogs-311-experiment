@@ -29,7 +29,7 @@ var comp_questions_5 = {
     correct_response: "D"
   },
   question_4: {
-    question: "When was Ballabh born??",
+    question: "When was Ballabh born?",
     A: "1800s",
     B: "1890s",
     C: "1830s",
@@ -46,9 +46,9 @@ var comp_questions_5 = {
   },
   question_6:{
     question: "What kind of environments do the sherpas live in?",
-    A: "Rich grassland",
-    B: "High plateau",
-    C: "Cold tundra",
+    A: "Rich grasslands",
+    B: "High plateaus",
+    C: "Cold tundras",
     D: "Not answerable",
     correct_response: "B"
   },
