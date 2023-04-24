@@ -1,15 +1,15 @@
-var story_6 = `<p><b>Kira is going to purchase a brand new house. The housing company decided to paint all of the units the same color so the new residents can customize them how they see fit. Kira wants her house to be simple: one-story, with no attic, and with no basement. She would like the house's floor to be blue and the walls and ceiling are white.</b></p>`
+var story_6 = `<p><b>Kira is going to purchase a brand new house. The homeowners association decided to paint all of the units the same color so the new residents can customize them how they see fit. Kira wants her house to be simple: one-story, with no attic, and with no basement. She would like the house's floor to be blue and the walls and ceiling are white.</b></p>`
 
 
 var story_6_inst = `<p style="text-align center;"><b>The recording has started. Please read the following passage out loud. Click 'Continue' when finished</b></p>
-<p style="text-align center;">Kira is going to purchase a brand new house. The housing company </p><p style="text-align center;">decided to paint all of the units the same color so the new residents can </p><p style="text-align center;">customize them how they see fit. Kira wants her house to be simple: </p><p style="text-align center;">one-story, with no attic, and with no basement. She would like the </p><p style="text-align center;">house's floor to be blue and the walls and ceiling are white.</p>`
+<p style="text-align center;">Kira is going to purchase a brand new house. The homeowners association </p><p style="text-align center;">decided to paint all of the units the same color so the new residents can </p><p style="text-align center;">customize them how they see fit. Kira wants her house to be simple: </p><p style="text-align center;">one-story, with no attic, and with no basement. She would like the </p><p style="text-align center;">house's floor to be blue and the walls and ceiling are white.</p>`
 
 var comp_questions_6 = {
   question_1: {
     question: "Who painted all the units white?",
     A: "Kira",
     B: "The construction company",
-    C: "The housing company",
+    C: "The homeowners association",
     D: "Not answerable",
     correct_response: "C"
   },
@@ -31,7 +31,7 @@ var comp_questions_6 = {
   },
   question_7: {
     question: "Who is painting Kira's new home?",
-    A: "The housing company",
+    A: "The homeowners association",
     B: "Kira",
     C: "Kira's boyfriend",
     D: "Not answerable",
