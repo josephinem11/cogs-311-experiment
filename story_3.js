@@ -45,7 +45,7 @@ var comp_questions_3 = {
         correct_response: "D",
     },
     question_2: {
-        question: "Which is heavier? The rocks, or the popsicle sticks?",
+        question: "Which is heavier? The rocks, the steel, or the popsicle sticks?",
         A: "Rocks",
         B: "Popsicle sticks",
         C: "Steel",
